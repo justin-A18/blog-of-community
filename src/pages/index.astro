@@ -1,0 +1,29 @@
+---
+import MainLayout from '@layouts/MainLayout.astro';
+---
+
+<MainLayout
+	title='ComunidadDev | Home'
+	description='Aqui poner descripcion para SEO'>
+	<section class='w-full grid sm:grid-cols-2 items-center gap-8'>
+		
+		<article class='flex flex-col gap-4 text-[#e7e9ea]'>
+			<h1 class='text-4xl lg:text-6xl font-bold text-[#E7562E]'>Hola!</h1>
+			<p class='text-lg lg:text-2xl'>
+				¡Bienvenido a nuestro rincón de conocimiento tecnológico! Aquí
+				encontrarás una colección de apuntes sobre diversas tecnologías como:
+				<span class='text-[#E7562E] font-medium'
+					>JavaScript, TypeScript y muchas otras.</span
+				>
+			</p>
+		</article>
+		
+		<div class='flex items-center justify-center md:justify-end'>
+			<img
+				class='rounded-full w-56 md:w-80 lg:w-96'
+				src='/image.jpeg'
+				alt='imageref'
+			/>
+		</div>
+	</section>
+</MainLayout>

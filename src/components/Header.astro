@@ -1,0 +1,40 @@
+---
+import LinkNav from './utils/LinkNav.astro';
+import LinkIcon from './utils/LinkIcon.astro';
+
+import routes from '../data/routesData';
+---
+
+<header class='max-w-3xl lg:max-w-5xl min-h-20 py-8 sm:px-4 xl:px-0 mx-auto'>
+	<nav
+		class='h-full flex flex-col gap-8 md:gap-0 items-center md:flex-row sm:justify-between text-[#E7E9EA] font-bold'>
+		<LinkIcon
+			path='/'
+			iconName='code'
+			classNameIcon='size-8'
+			text='ComunidadDev'
+			className='text-2xl flex items-center gap-4'
+		/>
+
+		<ul class='flex
+			items-center
+			gap-4'>
+			{
+				routes.map(({ name, path }) => (
+					<LinkNav
+						name={name}
+						path={path}
+					/>
+				))
+			}
+		</ul>
+
+		<LinkIcon
+			path='https://discord.gg/Y4j8QuAa'
+			iconName='discord'
+			target='_blank'
+			rel='nooppener'
+			classNameIcon='size-8 hover:brightness-150 transition-all duration-300'
+		/>
+	</nav>
+</header>

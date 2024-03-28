@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+	title: string;
+	date: string;
+	path: string;
+	iconName: string;
+}
+
+const { title, date, iconName, path } = Astro.props;
+---
+
+<a href={path}>
+	<figure
+		class='border-b-2 hover:bg-[#586474] border-[#586474] flex items-center gap-4 p-4 transition-all duration-300'>
+		<Icon
+			name={iconName}
+			class='size-8'
+		/>
+
+		<figcaption class='w-full flex justify-between items-center'>
+			<span class='font-bold sm:text-lg'>{title}</span>
+			<time
+				datetime={date}
+				class='font-[400]'
+				>{date}</time
+			>
+		</figcaption>
+	</figure>
+</a>

@@ -1,0 +1,17 @@
+---
+interface Props {
+	name: string;
+	path: string;
+	className?: string;
+}
+
+const { name, className, path } = Astro.props;
+---
+
+<li class={`${className} text-[#E7562E] text-lg`}>
+	<a
+		class="relative hover:text-[#ED9B40] transition-colors duration-300 before:content-[''] before:absolute before:w-full before:h-1 before:scale-0 before:bg-[#ED9B40] before:bottom-[-5px] hover:before:scale-100 before:transition-all before:duration-300 before:origin-left uppercase"
+		href={path}
+		>{name}</a
+	>
+</li>

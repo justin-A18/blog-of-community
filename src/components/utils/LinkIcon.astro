@@ -1,0 +1,32 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type Target = '_blank' | '_parent' | '_self' | '_top';
+type Rel = 'nooppener';
+
+interface Props {
+	rel?: Rel;
+	path: string;
+	iconName: string;
+	target?: Target;
+	className?: string;
+	classNameIcon?: string;
+	text?: string;
+}
+
+const { path, target, className, rel, iconName, classNameIcon, text } =
+	Astro.props;
+---
+
+<a
+	href={path}
+	class={`${className}`}
+	target={target}
+	rel={rel}>
+	<Icon
+		name={iconName}
+		class={classNameIcon}
+	/>
+
+	{text}
+</a>
